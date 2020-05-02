@@ -16,13 +16,31 @@ class App extends Component {
   }
 
   //sorts cards on page
-  removeFriend = () => {
-    // friends[id].clicked = true;
-    friends.sort((a,b) => Math.random() - 0.5);
+  removeFriend = id => {
+    const savedFriends = this.state.friends;
+
+    savedFriends.forEach( element => {
+      //if the ID has already been clicked, then restart the game
+      if(element.id === id) {
+        if(element.clicked) {
+          console.log("restarting")
+          return this.resetGame()
+        } else {
+          element.clicked = true;
+          savedFriends.sort((a,b) => Math.random() - 0.5);
+        }
+      }
+    })
 
     //Set this.state.friends equal to the new friends array
-    this.setState({friends});
+    this.setState({"friends": savedFriends});
   };
+  
+  resetGame = () => {
+    //resets friends array to json (fixes all true to false)
+    //CONFIGURE score for highest score ___________
+    this.setState({friends, "count": 0})
+  }
 
   //Map over this.state.friends and rend a FriendCard component for each friend object
   render() {

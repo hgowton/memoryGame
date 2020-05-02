@@ -2,60 +2,72 @@
     {
         "id": 1,
         "name": "Spiderman",
+        "clicked": false,
         "image": "https://i.annihil.us/u/prod/marvel/i/mg/9/30/538cd33e15ab7/standard_xlarge.jpg"
     },
     {
         "id": 2,
         "name": "Ironman",
+        "clicked": false,
         "image": "https://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6/standard_xlarge.jpg"
     },
     {
         "id": 3,
         "name": "Black Panther",
+        "clicked": false,
         "image": "https://i.annihil.us/u/prod/marvel/i/mg/1/c0/537ba2bfd6bab/standard_xlarge.jpg"
     },     
     {
         "id": 4,
         "name": "Deadpool",
+        "clicked": false,
         "image": "https://i.annihil.us/u/prod/marvel/i/mg/5/c0/537ba730e05e0/standard_xlarge.jpg"
     },
     {
         "id": 5,
+        "clicked": false,
         "name": "Captian America",
         "image": "https://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087/standard_xlarge.jpg"
     },
     {
         "id": 6,
+        "clicked": false,
         "name": "Jessica Jones",
         "image": "https://i.annihil.us/u/prod/marvel/i/mg/b/40/jessica.jpg"
     },
     {
         "id": 7,
+        "clicked": false,
         "name": "Ant-Man",
         "image": "https://i.annihil.us/u/prod/marvel/i/mg/6/90/54ad7297b0a59/standard_xlarge.jpg"
     },
     {
         "id": 8,
+        "clicked": false,
         "name": "Captain Marvel",
         "image": "https://i.annihil.us/u/prod/marvel/i/mg/c/10/537ba5ff07aa4/standard_xlarge.jpg"
     },
     {
         "id": 9,
+        "clicked": false,
         "name": "Guardians of the Galaxy",
         "image": "https://i.annihil.us/u/prod/marvel/i/mg/c/10/537babe1c1f66/standard_xlarge.jpg"
     },
     {
         "id": 10,
+        "clicked": false,
         "name": "Wolverine",
         "image": "https://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf/standard_xlarge.jpg"
     },
     {
         "id": 11,
+        "clicked": false,
         "name": "Luke Cage",
         "image": "https://i.annihil.us/u/prod/marvel/i/mg/5/e0/537bb460046bd/standard_xlarge.jpg"
     },
     {
         "id": 12,
+        "clicked": false,
         "name": "Avengers",
         "image": "https://i.annihil.us/u/prod/marvel/i/mg/3/a0/537ba3793915b/standard_xlarge.jpg"
     }
