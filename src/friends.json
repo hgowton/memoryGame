@@ -41,18 +41,18 @@
     },
     {
         "id": 9,
-        "name": "https://i.annihil.us/u/prod/marvel/i/mg/c/10/537babe1c1f66/standard_xlarge.jpg",
-        "image": "Guardians of the Galaxy"
+        "name": "Guardians of the Galaxy",
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/c/10/537babe1c1f66/standard_xlarge.jpg"
     },
     {
         "id": 10,
-        "name": "https://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf/standard_xlarge.jpg",
-        "image": "Wolverine"
+        "name": "Wolverine",
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf/standard_xlarge.jpg"
     },
     {
         "id": 11,
-        "name": "https://i.annihil.us/u/prod/marvel/i/mg/5/e0/537bb460046bd/standard_xlarge.jpg",
-        "image": "Luke Cage"
+        "name": "Luke Cage",
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/5/e0/537bb460046bd/standard_xlarge.jpg"
     },
     {
         "id": 12,
