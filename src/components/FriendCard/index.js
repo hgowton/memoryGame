@@ -5,7 +5,9 @@ function FriendCard(props) {
     return(
         <div className="card select" onClick={() => 
         {props.removeFriend(props.id);
-        props.handleIncrement()}}>
+        props.handleIncrement();
+        props.handleScoreIncrement();
+        }}>
 
             <div className="img-container" >
                 <img alt={props.name} src={props.image} />

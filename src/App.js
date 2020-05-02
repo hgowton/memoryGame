@@ -8,11 +8,16 @@ class App extends Component {
   //Setting this.state.friends to the friends json array
   state={
     count: 0,
+    score: 0,
     friends
   };
 
   handleIncrement = () => {
     this.setState({count: this.state.count + 1});
+  }
+
+  handleScoreIncrement = () => {
+    this.setState({score: this.state.score + 10})
   }
 
   //sorts cards on page
@@ -23,7 +28,6 @@ class App extends Component {
       //if the ID has already been clicked, then restart the game
       if(element.id === id) {
         if(element.clicked) {
-          console.log("restarting")
           return this.resetGame()
         } else {
           element.clicked = true;
@@ -39,19 +43,21 @@ class App extends Component {
   resetGame = () => {
     //resets friends array to json (fixes all true to false)
     //CONFIGURE score for highest score ___________
-    this.setState({friends, "count": 0})
+    console.log("made it to reset")
+    this.setState({ "count": 0, friends })
   }
 
   //Map over this.state.friends and rend a FriendCard component for each friend object
   render() {
     return(
       <Wrapper>
-        <ScoreCard count={this.state.count} />
+        <ScoreCard count={this.state.count} score={this.state.score} />
         {this.state.friends.map(friend => (
           <FriendCard
           removeFriend={this.removeFriend}
           count={this.state.count}
           handleIncrement={this.handleIncrement}
+          handleScoreIncrement={this.handleScoreIncrement}
           id={friend.id}
           key={friend.id}
           name={friend.name}
