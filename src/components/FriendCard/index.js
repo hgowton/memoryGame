@@ -7,6 +7,8 @@ function FriendCard(props) {
         {props.removeFriend(props.id);
         props.handleIncrement();
         props.handleScoreIncrement();
+        props.handleTopScoreIncrement();
+        ;
         }}>
 
             <div className="img-container" >

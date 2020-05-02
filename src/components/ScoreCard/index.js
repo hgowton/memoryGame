@@ -10,7 +10,7 @@ function ScoreCard(props) {
         Card Count: {props.count}
       </div>
       <div className="col-md-6">
-        Score: {props.score}
+        Score: {props.score} High Score: {props.topScore}
       </div>
     </div>
   </div>)

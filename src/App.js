@@ -9,7 +9,8 @@ class App extends Component {
   state={
     count: 0,
     score: 0,
-    friends
+    friends,
+    topScore: 0,
   };
 
   handleIncrement = () => {
@@ -19,6 +20,17 @@ class App extends Component {
   handleScoreIncrement = () => {
     this.setState({score: this.state.score + 10})
   }
+
+  handleTopScoreIncrement = () => {
+    if (this.state.score >= this.state.topScore) {
+      console.log("topscore lower")
+      this.setState({topScore: this.state.score + 10})
+    }
+      else {
+        this.setState({topScore: this.state.topscore + 10})
+        }
+    }
+  
 
   //sorts cards on page
   removeFriend = id => {
@@ -51,13 +63,14 @@ class App extends Component {
   render() {
     return(
       <Wrapper>
-        <ScoreCard count={this.state.count} score={this.state.score} />
+        <ScoreCard count={this.state.count} score={this.state.score} topScore={this.state.topScore}/>
         {this.state.friends.map(friend => (
           <FriendCard
           removeFriend={this.removeFriend}
           count={this.state.count}
           handleIncrement={this.handleIncrement}
           handleScoreIncrement={this.handleScoreIncrement}
+          handleTopScoreIncrement={this.handleTopScoreIncrement}
           id={friend.id}
           key={friend.id}
           name={friend.name}
