@@ -4,10 +4,7 @@ import "./style.css"
 function FriendCard(props) {
     return(
         <div className="card select" onClick={() => 
-        {props.removeFriend(props.id);
-        // props.handleIncrement();
-        // props.handleScoreIncrement();
-        // props.handleTopScoreIncrement();
+        {props.updateFriend(props.id);
         ;
         }}>
 

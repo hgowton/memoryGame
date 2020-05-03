@@ -24,19 +24,21 @@ class App extends Component {
   handleTopScoreIncrement = () => {
     if (this.state.score >= this.state.topScore) {
       console.log("topscore lower")
-      this.setState({topScore: this.state.score})
+      this.setState({topScore: this.state.score + 10})
     }
 
     }
   
 
   //sorts cards on page
-  removeFriend = id => {
+  updateFriend = id => {
     let savedFriends = this.state.friends;
 
     savedFriends.forEach( element => {
-      //if the ID has already been clicked, then restart the game
+      // if the ID has already been clicked, then restart the game
       if(element.id === id) {
+        // console.log("element.clicked " + element.clicked)
+        console.log(element.id)
         if(element.clicked) {
           this.resetGame()
           return
@@ -51,15 +53,12 @@ class App extends Component {
       }
     })
 
-    //Set this.state.friends equal to the new friends array
   };
   
   resetGame = () => {
-    //resets friends array to json (fixes all true to false)
-    //CONFIGURE score for highest score ___________
     console.log("made it to reset")
+    //resets friends array to json (fixes all true to false)
     const resetData = this.state.friends.map(item => ({ ...item, clicked: false }));
-    console.log(resetData)
     this.setState({ count: 0, score: 0, friends: resetData })
   }
 
@@ -70,7 +69,7 @@ class App extends Component {
         <ScoreCard count={this.state.count} score={this.state.score} topScore={this.state.topScore}/>
         {this.state.friends.map(friend => (
           <FriendCard
-          removeFriend={this.removeFriend}
+          updateFriend={this.updateFriend}
           count={this.state.count}
           handleIncrement={this.handleIncrement}
           handleScoreIncrement={this.handleScoreIncrement}
