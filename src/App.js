@@ -32,27 +32,32 @@ class App extends Component {
 
   //sorts cards on page
   updateFriend = id => {
-    let savedFriends = this.state.friends;
+    let correct = false;
 
-    savedFriends.forEach( element => {
+    let savedFriends = this.state.friends.map( element => {
       // if the ID has already been clicked, then restart the game
-      if(element.id === id) {
-        // console.log("element.clicked " + element.clicked)
-        console.log(element.id)
-        if(element.clicked) {
-          this.resetGame()
-          return
+
+      let newElt = {...element}
+      if(newElt.id === id) {
+        console.log(newElt.name)
+        if(newElt.clicked) {
+          console.log("already clicked " + newElt.clicked)
         } else {
-          element.clicked = true;
-          this.handleIncrement();
-          this.handleScoreIncrement();
-          this.handleTopScoreIncrement();
-          savedFriends.sort((a,b) => Math.random() - 0.5);
-          this.setState({friends: savedFriends});
+          correct = true;
+          newElt.clicked = true
         }
       }
+      return newElt
     })
-
+    if (correct) {
+      this.handleIncrement();
+      this.handleScoreIncrement();
+      this.handleTopScoreIncrement();
+    } else {
+      return this.resetGame();
+    }
+    savedFriends.sort((a,b) => Math.random() - 0.5);
+    this.setState({friends: savedFriends});
   };
   
   resetGame = () => {
