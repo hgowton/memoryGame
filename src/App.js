@@ -74,7 +74,8 @@ class App extends Component {
           <div className="container">
             <div className="row">
               <div className="col-4-md">
-              <img src={process.env.PUBLIC_URL + './img/MarvelLogo.png'} />
+              {/* <img src={process.env.PUBLIC_URL + './img/MarvelLogo.png'} /> */}
+              <img src='./img/MarvelLogo.png' />
               </div>
 <div className="col-8-md">
               <ScoreCard count={this.state.count} score={this.state.score} topScore={this.state.topScore}/>
