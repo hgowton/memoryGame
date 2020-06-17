@@ -12,7 +12,6 @@
   .card > .img-container {
     height: 100%;
     overflow: hidden;
-    text-align: center;
   }
   
   .card > .img-container > img {
@@ -30,5 +29,9 @@
   
   .card > .select:hover {
     color: #d50000;
+  }
+
+  .content {
+    text-align: center;
   }
   

@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  background: red;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,14 +18,17 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background: url(`${process.env.PUBLIC_URL}${./img/MarvelLogo.png}`) no-repeat;
+  background-size: cover; */
+  background-color: black;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  overflow: hidden;
 }
 
 .App-link {

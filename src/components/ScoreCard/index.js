@@ -6,12 +6,10 @@ function ScoreCard(props) {
   return (
   <div className="container scoreCard">
     <div className="row">
-      <div className="col-md-6">
-        Card Count: {props.count}
+        Score: {props.score}
       </div>
-      <div className="col-md-6">
-        Score: {props.score} High Score: {props.topScore}
-      </div>
+      <div className="row">
+        High Score: {props.topScore}
     </div>
   </div>)
 }

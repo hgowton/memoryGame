@@ -70,6 +70,30 @@
         "name": "Avengers",
         "clicked": false,
         "image": "https://i.annihil.us/u/prod/marvel/i/mg/3/a0/537ba3793915b/standard_xlarge.jpg"
+    },
+    {
+        "id": 13,
+        "name": "A-Bomb",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/standard_xlarge.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Thor",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350/standard_xlarge.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Scarlet Witch",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/6/03/53177154d219d/standard_xlarge.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Hawkeye",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/e/90/50fecaf4f101b/standard_xlarge.jpg"
     }
 
 ]
