@@ -77,9 +77,12 @@ class App extends Component {
               {/* <img src={process.env.PUBLIC_URL + './img/MarvelLogo.png'} /> */}
               <img src='./img/MarvelLogo.png' />
               </div>
-<div className="col-8-md">
-              <ScoreCard count={this.state.count} score={this.state.score} topScore={this.state.topScore}/>
-</div>
+              <div className="col-8-md">
+              <ScoreCard 
+                count={this.state.count} 
+                score={this.state.score} 
+                topScore={this.state.topScore}/>
+              </div>
             </div>
           </div>
         </header>
@@ -87,7 +90,7 @@ class App extends Component {
         {this.state.friends.map(friend => (
           <FriendCard
           updateFriend={this.updateFriend}
-          count={this.state.count}
+          // count={this.state.count}
           handleIncrement={this.handleIncrement}
           handleScoreIncrement={this.handleScoreIncrement}
           handleTopScoreIncrement={this.handleTopScoreIncrement}
