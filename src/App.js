@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import ScoreCard from "./components/ScoreCard";
@@ -10,9 +10,8 @@ class App extends Component {
   state={
     count: 0,
     score: 0,
-    friends: villian,
+    friends: friends,
     topScore: 0,
-    card: ''
   };
 
   handleIncrement = () => {
@@ -29,10 +28,9 @@ class App extends Component {
     }
   }
   
-  
   changeDeck = () => {
     this.resetGame();
-    if(this.state.friends == friends) {
+    if(this.state.friends === friends) {
       this.setState({ friends: villian })
     } else {
       this.setState({ friends: friends })
@@ -48,9 +46,8 @@ class App extends Component {
 
       let newElt = {...element}
       if(newElt.id === id) {
-        console.log(newElt.name)
         if(newElt.clicked) {
-          console.log("already clicked " + newElt.clicked)
+          alert(`Oops you have already clicked ${newElt.name}`)
         } else {
           correct = true;
           newElt.clicked = true
@@ -58,6 +55,7 @@ class App extends Component {
       }
       return newElt
     })
+
     if (correct) {
       this.handleIncrement();
       this.handleScoreIncrement();
@@ -65,42 +63,31 @@ class App extends Component {
     } else {
       return this.resetGame();
     }
+
     savedFriends.sort((a,b) => Math.random() - 0.5);
     this.setState({friends: savedFriends});
+    console.log('score: ', this.state.score)
   };
   
   resetGame = () => {
-    //resets friends array to json (fixes all true to false)
-    // alert("Oops, you've already selected that character!")
     const resetData = this.state.friends.map(item => ({ ...item, clicked: false }));
     this.setState({ count: 0, score: 0, friends: resetData })
   }
 
-  //Map over this.state.friends and rend a FriendCard component for each friend object
   render() {
     return(
       <div>
-
         <header className="App-header">
-          <div className="container">
-            <div className="row">
-              <div className="col-4-md">
-              {/* <img src={process.env.PUBLIC_URL + './img/MarvelLogo.png'} /> */}
-              <img src='./img/MarvelLogo.png' />
-              </div>
-              <div className="col-8-md">
+              <img src='./img/MarvelLogo.png' alt="logo"/>
+        </header>
               <ScoreCard 
                 count={this.state.count} 
                 score={this.state.score} 
                 topScore={this.state.topScore}/>
                 <button onClick={this.changeDeck}>Change Deck</button>
-              </div>
-            </div>
-          </div>
-        </header>
-        <Wrapper>
-          {/* {this.state.score > 20 && <h1> Contrats</h1>} */}
-   
+          {this.state.score > 150 ? 
+          <h1> Contragulations on reaching the top score!</h1> : 
+          (<Wrapper>
         {this.state.friends.map(friend => (
           <FriendCard
           updateFriend={this.updateFriend}
@@ -112,8 +99,8 @@ class App extends Component {
           name={friend.name}
           image={friend.image}
           />
-        ))}
-      </Wrapper>
+        ))} </Wrapper>) }
+
       </div>
 
     );
