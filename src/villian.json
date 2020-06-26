@@ -1,0 +1,99 @@
+[
+    {
+        "id": 1,
+        "name": "Thanos",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/6/40/5274137e3e2cd/standard_xlarge.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Galactus",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/5/03/528d31a791308/standard_xlarge.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Magneto",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/d/70/53176f5026364/standard_xlarge.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Ultron",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/3/70/5261a838e93c0/standard_xlarge.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Red Skull",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/2/03/526036550cd37/standard_xlarge.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Annihilus",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/5/f0/528d31f20a2f6/standard_xlarge.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Vulture",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/5/50/4c00329c0dc23/standard_xlarge.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Doctor Doom",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/3/60/53176bb096d17/standard_xlarge.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Doctor Octopus",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/5/50/4c00344e05ce0/standard_xlarge.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Carnage",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/6/50/535fee423f170/standard_xlarge.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Mysterio",
+        "clicked": false,
+        "image": "http://i.annihil.us/u/prod/marvel/i/mg/6/70/4ce5a083d8346/standard_xlarge.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Mystique",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/4/03/528d33b473550/standard_xlarge.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Baron Zemo",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/5/a0/4c0035890fb0a/standard_xlarge.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Maestro",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/4/30/4d278ee344785/standard_xlarge.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Dark Phoenix",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/9/e0/4ce59f6c7e332/standard_xlarge.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Scarlet Witch",
+        "clicked": false,
+        "image": "https://i.annihil.us/u/prod/marvel/i/mg/6/03/53177154d219d/standard_xlarge.jpg"
+    }
+]
+

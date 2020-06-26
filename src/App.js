@@ -3,14 +3,16 @@ import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import ScoreCard from "./components/ScoreCard";
 import friends from "./friends.json";
+import villian from "./villian.json";
 import './App.css'
 
 class App extends Component {
   state={
     count: 0,
     score: 0,
-    friends: friends,
+    friends: villian,
     topScore: 0,
+    card: ''
   };
 
   handleIncrement = () => {
@@ -25,9 +27,17 @@ class App extends Component {
     if (this.state.score >= this.state.topScore) {
       this.setState({topScore: this.state.score + 10})
     }
-
-    }
+  }
   
+  
+  changeDeck = () => {
+    this.resetGame();
+    if(this.state.friends == friends) {
+      this.setState({ friends: villian })
+    } else {
+      this.setState({ friends: friends })
+    }
+  }
 
   //sorts cards on page
   updateFriend = id => {
@@ -61,6 +71,7 @@ class App extends Component {
   
   resetGame = () => {
     //resets friends array to json (fixes all true to false)
+    // alert("Oops, you've already selected that character!")
     const resetData = this.state.friends.map(item => ({ ...item, clicked: false }));
     this.setState({ count: 0, score: 0, friends: resetData })
   }
@@ -82,15 +93,17 @@ class App extends Component {
                 count={this.state.count} 
                 score={this.state.score} 
                 topScore={this.state.topScore}/>
+                <button onClick={this.changeDeck}>Change Deck</button>
               </div>
             </div>
           </div>
         </header>
-      <Wrapper>
+        <Wrapper>
+          {/* {this.state.score > 20 && <h1> Contrats</h1>} */}
+   
         {this.state.friends.map(friend => (
           <FriendCard
           updateFriend={this.updateFriend}
-          // count={this.state.count}
           handleIncrement={this.handleIncrement}
           handleScoreIncrement={this.handleScoreIncrement}
           handleTopScoreIncrement={this.handleTopScoreIncrement}
